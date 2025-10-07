@@ -1,0 +1,1 @@
+enum FontFamily { caros, circular }
