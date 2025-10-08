@@ -38,7 +38,6 @@ class ImageWidget extends StatelessWidget {
         width: width,
         scale: scale ?? 1.0,
         fit: fit,
-        color: color,
         colorBlendMode: colorBlendMode,
       );
     } else if (["jpg", "png", "jpeg"].contains(extension)) {
