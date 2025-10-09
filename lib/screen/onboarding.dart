@@ -15,7 +15,11 @@ class Onboarding extends StatelessWidget {
       backgroundColor: AppColor.black,
       body: Stack(
         children: [
-          Positioned(child: ImageWidget(imagePath: AppImages.onboarding)),
+          Positioned(
+            top: 0,
+            right: 0,
+            child: ImageWidget(imagePath: AppImages.onboarding),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
@@ -83,6 +87,7 @@ class Onboarding extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 Row(
+                  spacing: 5,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

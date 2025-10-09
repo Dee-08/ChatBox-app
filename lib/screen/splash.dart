@@ -3,7 +3,6 @@ import 'package:chatbox_app/core/constant/app_image.dart';
 import 'package:chatbox_app/core/extensions/theme_extensions.dart';
 import 'package:chatbox_app/provider/splash_provider.dart';
 import 'package:chatbox_app/screen/widget/image_widget.dart';
-import 'package:chatbox_app/screen/widget/theme_mode_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

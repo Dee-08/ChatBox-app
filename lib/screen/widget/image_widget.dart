@@ -47,7 +47,6 @@ class ImageWidget extends StatelessWidget {
         width: width,
         scale: scale,
         fit: fit,
-        color: color,
         colorBlendMode: colorBlendMode,
       );
     } else if (imagePath.endsWith(".svg")) {

@@ -6,7 +6,7 @@ class AppTheme {
     titleSmall: TextStyle(fontFamily: FontFamily.caros, fontSize: 16),
     titleMedium: TextStyle(fontFamily: FontFamily.caros, fontSize: 20),
     titleLarge: TextStyle(fontFamily: FontFamily.caros, fontSize: 24),
-    bodySmall: TextStyle(fontFamily: FontFamily.circular, fontSize: 216),
+    bodySmall: TextStyle(fontFamily: FontFamily.circular, fontSize: 16),
     bodyMedium: TextStyle(fontFamily: FontFamily.circular, fontSize: 20),
     bodyLarge: TextStyle(fontFamily: FontFamily.circular, fontSize: 24),
   );
