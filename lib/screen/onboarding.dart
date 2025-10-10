@@ -95,10 +95,15 @@ class Onboarding extends StatelessWidget {
                       "Existing Account?",
                       style: context.textTheme.bodySmall,
                     ),
-                    Text(
-                      "Log in",
-                      style: context.textTheme.bodySmall?.copyWith(
-                        color: AppColor.primary,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "login");
+                      },
+                      child: Text(
+                        "Log in",
+                        style: context.textTheme.bodySmall?.copyWith(
+                          color: AppColor.primary,
+                        ),
                       ),
                     ),
                   ],
