@@ -5,4 +5,5 @@ extension ThemeExtensions on BuildContext {
   bool get isLight => Theme.of(this).brightness == Brightness.light;
 
   TextTheme get textTheme => Theme.of(this).textTheme;
+  Size get screenSize => MediaQuery.sizeOf(this);
 }

@@ -4,13 +4,12 @@ import 'package:chatbox_app/screen/widget/or_widget.dart';
 import 'package:chatbox_app/screen/widget/social_buttons.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
@@ -25,55 +24,45 @@ class LoginPage extends StatelessWidget {
                   color: AppColor.textColor(context),
                 ),
                 children: [
+                  TextSpan(text: "Sign up with "),
                   TextSpan(
-                    text: "Log in",
+                    text: "Email",
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       decorationColor: AppColor.primary,
                       decorationThickness: 3,
                     ),
                   ),
-                  TextSpan(text: " To ChatBox"),
                 ],
               ),
             ),
 
             Text(
-              "Welcome back! Sign in using your \nsocial media account or email to continue with us",
+              "Get Chatting with Friends and family today by \nsigning up and getting your account",
               style: context.textTheme.bodySmall?.copyWith(
                 color: AppColor.grey,
                 fontSize: 14,
               ),
               textAlign: TextAlign.center,
             ),
-            Row(
-              spacing: 12,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SocialButton(
-                  imagePath: AppImages.facebook,
-                  borderColor: AppColor.black,
-                  onPressed: () {},
-                ),
-                SocialButton(
-                  imagePath: AppImages.google,
-                  borderColor: AppColor.black,
-                  onPressed: () {},
-                ),
-                SocialButton(
-                  imagePath: AppImages.apple,
-                  borderColor: AppColor.black,
-                  onPressed: () {},
-                  color: AppColor.black,
-                ),
-              ],
-            ),
-            OrWidget(),
+            SizedBox(height: 30),
             Form(
               child: Column(
                 spacing: 10,
                 children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Name",
+                        style: context.textTheme.bodySmall?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.primary,
+                        ),
+                      ),
+                      TextFormField(),
+                    ],
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -100,17 +89,24 @@ class LoginPage extends StatelessWidget {
                       TextFormField(),
                     ],
                   ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Confirm Password",
+                        style: context.textTheme.bodySmall?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.primary,
+                        ),
+                      ),
+                      TextFormField(),
+                    ],
+                  ),
                 ],
               ),
             ),
-            SizedBox(height: context.screenSize.height * 0.18),
-            AppButtons(onPressed: () {}, text: "Login"),
-            Text(
-              "Forget Password?",
-              style: context.textTheme.bodySmall?.copyWith(
-                color: AppColor.primary,
-              ),
-            ),
+            SizedBox(height: context.screenSize.height * 0.1),
+            AppButtons(onPressed: () {}, text: "Create an Account"),
           ],
         ),
       ),
