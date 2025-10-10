@@ -1,7 +1,9 @@
+import 'package:chatbox_app/screen/forget_password.dart';
 import 'package:chatbox_app/screen/login.dart';
 import 'package:chatbox_app/screen/onboarding.dart';
 import 'package:chatbox_app/screen/sign_up.dart';
 import 'package:chatbox_app/screen/splash.dart';
+import 'package:chatbox_app/screen/verify_email.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -10,5 +12,7 @@ class AppRouter {
     "onboarding": (BuildContext context) => Onboarding(),
     "login": (BuildContext context) => LoginPage(),
     "sign_up": (BuildContext context) => SignUp(),
+    "verify": (BuildContext context) => VerifyEmail(),
+    "forget": (BuildContext context) => ForgetPassword(),
   };
 }

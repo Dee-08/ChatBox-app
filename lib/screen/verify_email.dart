@@ -2,8 +2,8 @@ import 'package:chatbox_app/core/constant/app_button.dart';
 import 'package:chatbox_app/core/core.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class VerifyEmail extends StatelessWidget {
+  const VerifyEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,63 +52,34 @@ class SignUp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Name",
+                        "Verify OTP",
                         style: context.textTheme.bodySmall?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AppColor.primary,
                         ),
                       ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Email",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 15,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(width: 60, child: TextFormField()),
+                          SizedBox(width: 60, child: TextFormField()),
+                          SizedBox(width: 60, child: TextFormField()),
+                          SizedBox(width: 60, child: TextFormField()),
+                        ],
                       ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Password",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Confirm Password",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(),
                     ],
                   ),
                 ],
               ),
             ),
-            SizedBox(height: context.screenSize.height * 0.1),
+            SizedBox(height: context.screenSize.height * 0.4),
             AppButtons(
               onPressed: () {
-                Navigator.pushNamed(context, "verify");
+                Navigator.pushNamed(context, "forget");
               },
-              text: "Create an Account",
+              text: "Continue",
             ),
           ],
         ),

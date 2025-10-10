@@ -3,6 +3,7 @@ import 'package:chatbox_app/core/constant/app_color.dart';
 import 'package:chatbox_app/core/constant/app_image.dart';
 import 'package:chatbox_app/core/extensions/theme_extensions.dart';
 import 'package:chatbox_app/screen/widget/image_widget.dart';
+import 'package:chatbox_app/screen/widget/or_widget.dart';
 import 'package:chatbox_app/screen/widget/social_buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,7 @@ class Onboarding extends StatelessWidget {
                   spacing: 10,
                   children: [
                     ImageWidget(imagePath: AppImages.logo, height: 20),
-                    Text("ChatBox"),
+                    Text("ChatBox", style: TextStyle(color: AppColor.white)),
                   ],
                 ),
                 SizedBox(height: 50),
@@ -41,6 +42,7 @@ class Onboarding extends StatelessWidget {
                   style: context.textTheme.titleLarge?.copyWith(
                     fontSize: 55,
                     letterSpacing: 2,
+                    color: AppColor.white,
                   ),
                 ),
                 SizedBox(height: 10),
@@ -50,6 +52,7 @@ class Onboarding extends StatelessWidget {
                     fontSize: 55,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 2,
+                    color: AppColor.white,
                   ),
                 ),
                 SizedBox(height: 25),
@@ -59,6 +62,7 @@ class Onboarding extends StatelessWidget {
                     fontSize: 14,
                     wordSpacing: 2,
                     letterSpacing: 2,
+                    color: AppColor.white,
                   ),
                 ),
                 Spacer(),
@@ -78,10 +82,14 @@ class Onboarding extends StatelessWidget {
                     SocialButton(imagePath: AppImages.apple, onPressed: () {}),
                   ],
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 30),
+                OrWidget(
+                  textColor: AppColor.white,
+                  dividerColor: AppColor.grey,
+                ),
                 AppButtons(
                   onPressed: () {
-                    Navigator.pushNamed(context, "login");
+                    Navigator.pushNamed(context, "sign_up");
                   },
                   text: "Sign Up with mail",
                 ),
@@ -93,7 +101,9 @@ class Onboarding extends StatelessWidget {
                   children: [
                     Text(
                       "Existing Account?",
-                      style: context.textTheme.bodySmall,
+                      style: context.textTheme.bodySmall?.copyWith(
+                        color: AppColor.white,
+                      ),
                     ),
                     GestureDetector(
                       onTap: () {

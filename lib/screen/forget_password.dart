@@ -2,8 +2,8 @@ import 'package:chatbox_app/core/constant/app_button.dart';
 import 'package:chatbox_app/core/core.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class ForgetPassword extends StatelessWidget {
+  const ForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,46 +52,7 @@ class SignUp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Name",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
                         "Email",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Password",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Confirm Password",
                         style: context.textTheme.bodySmall?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AppColor.primary,
@@ -104,12 +65,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             SizedBox(height: context.screenSize.height * 0.1),
-            AppButtons(
-              onPressed: () {
-                Navigator.pushNamed(context, "verify");
-              },
-              text: "Create an Account",
-            ),
+            AppButtons(onPressed: () {}, text: "Continue"),
           ],
         ),
       ),
