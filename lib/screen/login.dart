@@ -1,14 +1,18 @@
 import 'package:chatbox_app/core/constant/app_button.dart';
 import 'package:chatbox_app/core/core.dart';
+import 'package:chatbox_app/provider/auth_provider.dart';
 import 'package:chatbox_app/screen/widget/or_widget.dart';
 import 'package:chatbox_app/screen/widget/social_buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var authProvider = context.read<AuthProvider>();
+
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
@@ -84,7 +88,18 @@ class LoginPage extends StatelessWidget {
                           color: AppColor.primary,
                         ),
                       ),
-                      TextFormField(),
+                      TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Password is required";
+                          } else if (value.length < 6) {
+                            return "Password must not be less than 6 characters";
+                          } else {
+                            return null;
+                          }
+                        },
+                        controller: authProvider.emailController,
+                      ),
                     ],
                   ),
                   Column(
@@ -97,14 +112,40 @@ class LoginPage extends StatelessWidget {
                           color: AppColor.primary,
                         ),
                       ),
-                      TextFormField(),
+                      TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Password is required";
+                          } else if (value.length < 6) {
+                            return "Password must not be less than 6 characters";
+                          } else {
+                            return null;
+                          }
+                        },
+                        controller: authProvider.passwordController,
+                      ),
                     ],
                   ),
                 ],
               ),
             ),
             SizedBox(height: context.screenSize.height * 0.18),
-            AppButtons(onPressed: () {}, text: "Login"),
+            Consumer<AuthProvider>(
+              builder: (context, authProvider, _) {
+                return authProvider.isLoading
+                    ? Center(
+                        child: CircularProgressIndicator(
+                          color: AppColor.primary,
+                        ),
+                      )
+                    : AppButtons(
+                        onPressed: () {
+                          context.read<AuthProvider>().login();
+                        },
+                        text: "Login",
+                      );
+              },
+            ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, "forget");

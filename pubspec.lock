@@ -121,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
+  flint_client:
+    dependency: "direct main"
+    description:
+      name: flint_client
+      sha256: "1921a1f06dbb55a16be86ed8d451d3d06bdc51aa2281814aa7399bdc57d554e7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1+2"
   flutter:
     dependency: "direct main"
     description: flutter
