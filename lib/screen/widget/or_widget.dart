@@ -17,7 +17,12 @@ class OrWidget extends StatelessWidget {
         Expanded(child: Divider(color: dividerColor)),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text("Or", style: context.textTheme.titleMedium),
+          child: Text(
+            "Or",
+            style: context.textTheme.titleMedium?.copyWith(
+              color: AppColor.textColor(context),
+            ),
+          ),
         ),
         Expanded(child: Divider(color: dividerColor)),
       ],

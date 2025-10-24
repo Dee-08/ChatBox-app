@@ -52,19 +52,6 @@ class SignUp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Name",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
                         "Email",
                         style: context.textTheme.bodySmall?.copyWith(
                           fontWeight: FontWeight.bold,

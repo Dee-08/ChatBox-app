@@ -10,7 +10,7 @@ class AppTextTheme {
     ),
     titleMedium: TextStyle(
       fontFamily: FontFamily.caros,
-      fontSize: 20,
+      fontSize: 18,
       color: AppColor.black,
     ),
     titleLarge: TextStyle(
@@ -25,7 +25,7 @@ class AppTextTheme {
     ),
     bodyMedium: TextStyle(
       fontFamily: FontFamily.circular,
-      fontSize: 20,
+      fontSize: 18,
       color: AppColor.black,
     ),
     bodyLarge: TextStyle(
@@ -43,7 +43,7 @@ class AppTextTheme {
     ),
     titleMedium: TextStyle(
       fontFamily: FontFamily.caros,
-      fontSize: 20,
+      fontSize: 18,
       color: AppColor.white,
     ),
     titleLarge: TextStyle(
@@ -58,7 +58,7 @@ class AppTextTheme {
     ),
     bodyMedium: TextStyle(
       fontFamily: FontFamily.circular,
-      fontSize: 20,
+      fontSize: 18,
       color: AppColor.white,
     ),
     bodyLarge: TextStyle(

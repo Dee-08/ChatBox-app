@@ -1,6 +1,7 @@
 import 'package:chatbox_app/core/constant/app_button.dart';
 import 'package:chatbox_app/core/core.dart';
 import 'package:chatbox_app/provider/auth_provider.dart';
+import 'package:chatbox_app/screen/widget/app_textField.dart';
 import 'package:chatbox_app/screen/widget/or_widget.dart';
 import 'package:chatbox_app/screen/widget/social_buttons.dart';
 import 'package:flutter/material.dart';
@@ -78,53 +79,14 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 spacing: 10,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Email",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Password is required";
-                          } else if (value.length < 6) {
-                            return "Password must not be less than 6 characters";
-                          } else {
-                            return null;
-                          }
-                        },
-                        controller: authProvider.emailController,
-                      ),
-                    ],
+                  AppTextfield(
+                    label: "Email",
+                    controller: authProvider.emailController,
+                    validator: (value) {},
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Password",
-                        style: context.textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary,
-                        ),
-                      ),
-                      TextFormField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Password is required";
-                          } else if (value.length < 6) {
-                            return "Password must not be less than 6 characters";
-                          } else {
-                            return null;
-                          }
-                        },
-                        controller: authProvider.passwordController,
-                      ),
-                    ],
+                  AppTextfield(
+                    label: "Password",
+                    controller: authProvider.passwordController,
                   ),
                 ],
               ),

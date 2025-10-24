@@ -83,10 +83,7 @@ class Onboarding extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 30),
-                OrWidget(
-                  textColor: AppColor.white,
-                  dividerColor: AppColor.grey,
-                ),
+                OrWidget(dividerColor: AppColor.grey),
                 AppButtons(
                   onPressed: () {
                     Navigator.pushNamed(context, "sign_up");
